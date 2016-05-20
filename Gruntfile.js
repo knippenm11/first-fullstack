@@ -526,9 +526,9 @@ module.exports = function(grunt) {
 
     // Compiles ES6 to JavaScript using Babel
     babel: {
-      options: {
-        sourceMap: true
-      },
+      // options: {
+      //   sourceMap: true
+      // },
       client: {
         files: [{
           expand: true,
@@ -539,10 +539,11 @@ module.exports = function(grunt) {
       },
       server: {
         options: {
-          plugins: [
-            'transform-class-properties',
-            'transform-runtime'
-          ]
+        //   plugins: [
+        //     'transform-class-properties',
+        //     'transform-runtime'
+        //   ]
+        presets: ['es2015']
         },
         files: [{
           expand: true,
